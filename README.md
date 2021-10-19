@@ -13,3 +13,12 @@ php artisan serve
 php artisan make:controller PostController
 
 php artisan migrate
+
+php artisan make:migration creat_posts_table --create=posts
+
+php artisan make:seeder PostSeeder
+
+php artisan db:seed
+
+php artisan db:fresh
+
