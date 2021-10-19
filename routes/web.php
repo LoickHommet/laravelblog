@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/post/{id}', function (Request $request, $id) {
+    //recupérer les informations id obligatoire
+    dd($request);   
+});
+
+Route::get('/posts/{id?}', function ($id) {
+    //id? optional
+    dd($id);
+});
+
+Route::get('/test', [PostController::class, 'test']);
