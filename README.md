@@ -10,6 +10,8 @@
 lancer un server:
 php artisan serve
 
+php artisan make:controller PostController
+
 
 
 ## About Laravel
