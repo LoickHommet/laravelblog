@@ -7,11 +7,24 @@ Le titre est présent
 
 
 @section('content')
-<h1>Document</h1>
-
- {{$loading}}
+@if ($loading)
 
 <p>Chargement...</p>
+
+@else
+
+<h1>Document</h1>
+<ul>
+@foreach ($posts as $post )
+    <li>
+        <div class="row"> {{$post->title}}</div>
+        <div class="row"> {{$post->description}}</div>
+        <div class="row"> {{$post->extrait}}</div>
+    </li>
+    
+@endforeach
+</ul>
+@endif
 
 
 @endsection
